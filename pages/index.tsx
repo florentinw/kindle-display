@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import fetch from 'node-fetch'
 
 const fetchData = async () => {
-  const r = await fetch('http://localhost:3000/api/weather', {
+  const r = await fetch('/api/weather', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
