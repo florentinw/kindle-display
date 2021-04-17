@@ -12,7 +12,7 @@ const fetchData = async (url) => {
   })
   const response = await r.json()
   if (response.error) {
-    const error = new Error('irgendein error ahah')
+    const error = new Error(response.error)
     throw error
   }
   return response
