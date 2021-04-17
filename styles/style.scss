@@ -1,15 +1,27 @@
 @import 'includes/reset';
 .rotate {
-  box-sizing: border-box;
   transform: rotate(90deg);
-  transform-origin: center;
-  background: white;
-  min-height: 100vw;
+  transform-origin: bottom left;
+
+  position: absolute;
+  top: -100%;
+  left: 0;
+
+  height: 100%;
+  width: 135%;
   border: 1px solid black;
+  overflow: auto;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
 .container {
-  padding: 40px 64px;
+  padding: 80px 64px;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   border: 1px solid black;
 }
@@ -19,6 +31,7 @@
   }
   display: flex !important;
   flex-wrap: none;
+  position: relative;
 }
 .header {
   margin-bottom: 64px;
@@ -37,7 +50,7 @@
     font-size: 64px;
     display: block;
     &.big {
-      font-size: 176px;
+      font-size: 184px;
     }
   }
 }
