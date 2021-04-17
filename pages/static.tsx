@@ -54,7 +54,7 @@ const getData = async (accessToken: string) => {
   const data = {
     header: [
       {
-        label: 'Draußen',
+        label: 'Außen',
         value: `${
           device.modules?.find((item) => item.module_name === 'Balkon')
             ?.dashboard_data?.Temperature
@@ -71,18 +71,18 @@ const getData = async (accessToken: string) => {
           label: 'CO2',
           value: device?.dashboard_data?.CO2,
         },
-        {
-          label: 'Luftfeuchtigkeit',
-          value: `${device?.dashboard_data?.Humidity}%`,
-        },
       ],
       [
         {
-          label: 'Luftfeuchtigkeit',
+          label: 'Außen',
           value: `${
             device.modules?.find((item) => item.module_name === 'Balkon')
               ?.dashboard_data?.Humidity
           }%`,
+        },
+        {
+          label: 'Innen',
+          value: `${device?.dashboard_data?.Humidity}%`,
         },
       ],
     ],
