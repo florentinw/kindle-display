@@ -34,13 +34,13 @@ const getData = async (accessToken: string) => {
           value: device?.dashboard_data?.CO2,
         },
         {
-          label: 'Luftfeuchtigkeit',
+          label: 'Feucht',
           value: `${device?.dashboard_data?.Humidity}%`,
         },
       ],
       [
         {
-          label: 'Luftfeuchtigkeit',
+          label: 'Feucht',
           value: `${
             device.modules?.find((item) => item.module_name === 'Balkon')
               ?.dashboard_data?.Humidity

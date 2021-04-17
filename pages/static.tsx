@@ -3,7 +3,7 @@ import Head from 'next/head'
 const Dashboard = ({ data }) => (
   <>
     <Head>
-      <meta http-equiv="refresh" content={(60 * 15).toString()} />
+      <meta httpEquiv="refresh" content={(60 * 15).toString()} />
     </Head>
     <div className="rotate">
       <div className="container">
