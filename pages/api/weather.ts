@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import fetch from 'node-fetch'
 
 const getData = async (accessToken: string) => {
   const r = await fetch(
@@ -7,7 +6,6 @@ const getData = async (accessToken: string) => {
     {
       method: 'GET',
       headers: {
-        Accept: 'application/json',
         Authorization: `Bearer ${accessToken}`,
       },
     }
@@ -92,7 +90,7 @@ const weather = async (req: NextApiRequest, res: NextApiResponse) => {
       .status(200)
       .json({ header: data.header, body: data.body, accessToken })
   } catch (error) {
-    return res.status(500).json({ error })
+    return res.status(500).json({ error: error.message })
   }
 }
 
