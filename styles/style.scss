@@ -1,0 +1,44 @@
+@import "includes/reset";
+.rotate {
+  padding-left: 0px;
+  box-sizing: border-box;
+  transform: rotate(90deg);
+  transform-origin: center;
+  background: white;
+  min-height: 100vw;
+  min-width: 100vh;
+  //border: 1px solid black;
+}
+
+.container {
+  padding: 40px 64px;
+  box-sizing: border-box;
+  //border: 1px solid black;
+}
+.row {
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+  display: flex;
+}
+.header {
+  margin-bottom: 64px;
+}
+
+.group {
+  &:not(:last-of-type) {
+    margin-right: 72px;
+  }
+  span.label {
+    font-size: 24px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  span.temperature {
+    font-size: 64px;
+    display: block;
+    &.big {
+      font-size: 176px;
+    }
+  }
+}
