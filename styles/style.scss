@@ -1,12 +1,10 @@
 @import 'includes/reset';
 .rotate {
-  padding-left: 0px;
   box-sizing: border-box;
   transform: rotate(90deg);
   transform-origin: center;
   background: white;
   min-height: 100vw;
-  min-width: 100vh;
   border: 1px solid black;
 }
 
@@ -19,7 +17,8 @@
   &:not(:last-of-type) {
     margin-bottom: 40px;
   }
-  display: flex;
+  display: flex !important;
+  flex-wrap: none;
 }
 .header {
   margin-bottom: 64px;
