@@ -15,7 +15,7 @@ const Dashboard = ({ data }) => (
             </div>
           ))}
         </div>
-        <div className="row">
+        <div className="row" style={{ display: 'flex' }}>
           {data.body[0].map((group, i) => (
             <div className="group" key={i}>
               <span className="label">{group.label}</span>
@@ -23,7 +23,7 @@ const Dashboard = ({ data }) => (
             </div>
           ))}
         </div>
-        <div className="row">
+        <div className="row" style={{ display: 'flex' }}>
           {data.body[1].map((group, i) => (
             <div className="group" key={i}>
               <span className="label">{group.label}</span>
