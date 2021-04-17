@@ -1,4 +1,5 @@
 import useSWR from 'swr'
+import fetch from 'node-fetch'
 
 const fetchData = async () => {
   const r = await fetch('http://localhost:3000/api/weather', {
@@ -10,7 +11,10 @@ const fetchData = async () => {
     body: JSON.stringify({ access_token: '' }),
   })
   const response = await r.json()
-  if (response.error) throw response.error
+  if (response.error) {
+    const error = new Error('irgendein error ahah')
+    throw error
+  }
   return response
 }
 
@@ -22,6 +26,7 @@ const Dashboard = ({ serverData }) => {
 
   return (
     <div className="rotate">
+      {error ? <p style={{ color: 'red' }}>{error.message}</p> : null}
       <div className="container">
         <div className="header">
           {data.header.map((group, i) => (

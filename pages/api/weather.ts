@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import fetch from 'node-fetch'
 
 const getData = async (accessToken: string) => {
   const r = await fetch(
